@@ -1,0 +1,41 @@
+{
+    "version": "0.1.0",
+    "command": "cmd",
+    "isShellCommand": true,
+    "showOutput": "silent",
+    "args": [
+        "/c"
+    ],
+    "tasks": [
+        {
+            "taskName": "build",
+            "suppressTaskName": true,
+            "args" : ["gulp", "build"]
+        },
+        {
+            "taskName": "clean",
+            "suppressTaskName": true,
+            "args" : ["gulp", "clean"]
+        },
+        {
+            "taskName": "watch",
+            "suppressTaskName": true,
+            "args" : ["gulp", "watch"]
+        },
+        {
+            "taskName": "launch-last-build",
+            "suppressTaskName": true,
+            "args" : ["electron", "dist/main.js"]
+        },
+        {
+            "taskName": "dotnet version",
+            "suppressTaskName": true,
+            "args" : ["dotnet", "--version"],
+            "showOutput": "always"
+        },
+        {
+            "taskName": "curr-folder",
+            "args" : ["cd"]
+        }
+    ]
+}
