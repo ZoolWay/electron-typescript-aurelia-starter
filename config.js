@@ -1,7 +1,6 @@
 System.config({
   defaultJSExtensions: true,
   transpiler: false,
-  /* paths relative to import point of SystemJS, which is [src|app]/ux/index.html */
   paths: {
     "*": "./*",
     "github:*": "../../jspm_packages/github/*",
