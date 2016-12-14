@@ -1,5 +1,5 @@
 import * as electron from 'electron';
-import {app, BrowserWindow, dialog} from 'electron';
+import {app, BrowserWindow, dialog, ipcMain} from 'electron';
 
 var mainWindow: Electron.BrowserWindow = null;
 
@@ -11,7 +11,7 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
 
-    var opts: Electron.ShowMessageBoxOptions = {
+    let opts: Electron.ShowMessageBoxOptions = {
         message: 'test',
         buttons: ['ok']
     };
@@ -26,7 +26,15 @@ app.on('ready', function() {
     mainWindow.webContents.on('did-finish-load', () => {
         mainWindow.setTitle(app.getName());
     });
-    mainWindow.toggleDevTools();
+    mainWindow.webContents.toggleDevTools();
+
+    ipcMain.on('app-dlg-message', (event, msg) => {
+        var dlgOpts: Electron.ShowMessageBoxOptions = {
+            message: msg,
+            buttons: ['ok']
+        };
+        dialog.showMessageBox(dlgOpts);
+    });
 
     mainWindow.on('closed', function() {
         mainWindow = null;

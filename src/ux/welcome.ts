@@ -1,5 +1,6 @@
 // import {computedFrom} from 'aurelia-framework';
-import {dialog} from 'electron';
+
+var ipc: Electron.IpcRenderer = window.nodeRequire('electron').ipcRenderer;
 
 export class Welcome {
   public heading = 'Welcome to the Aurelia Navigation App!';
@@ -28,10 +29,7 @@ export class Welcome {
   }
 
   public testElectron() {
-    var opts: Electron.ShowMessageBoxOptions = {
-        message: 'test-inside-aurelia'
-    };
-    dialog.showMessageBox(opts);
+    ipc.send('app-dlg-message', 'test-inside-aurelia');
   }
 }
 
