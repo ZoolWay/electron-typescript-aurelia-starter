@@ -49,6 +49,8 @@ electron dist/main.js
 
 ## Todo
 
+[ ] Is there a way to use TypeScript **import**-syntax to load electron modules instead of `window.nodeRequire`?
+
 [ ] Enable SASS/SCSS for CSS
 
 [ ] Adopt `gulp watch` task to automatically reload electron after rebuilding
