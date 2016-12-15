@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "author": "ZoolWay <zoolway@gmail.com> (https://github.com/ZoolWay/)",
-  "main": "dist/main.ts",
+  "main": "dist/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ZoolWay/electron-typescript-aurelia-starter"
@@ -36,6 +36,7 @@
     "conventional-changelog": "1.1.0",
     "del": "^2.2.2",
     "electron-connect": "^0.6.1",
+    "electron-packager": "^8.4.0",
     "electron-prebuilt": "^1.4.10",
     "es6-module-loader": "^0.17.11",
     "gulp": "^3.9.1",
