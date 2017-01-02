@@ -1,5 +1,13 @@
 # electron-typescript-aurelia-starter
 
+## Requirements
+
+Globally installed NPM packages:
+
+* jspm
+* typings
+* gulp
+
 ## Prepare
 
 ```shell
