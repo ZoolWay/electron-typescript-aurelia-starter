@@ -2,11 +2,20 @@
 
 ## Requirements
 
+### Development
+
 Globally installed NPM packages:
 
 * jspm
 * typings
 * gulp
+
+### Packaging
+
+Glboally installed NPM packages:
+
+* wine (when packing win on linux)
+* electron-packager
 
 ## Prepare
 
