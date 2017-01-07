@@ -19,6 +19,11 @@
       "iconUrl": "https link to icon"
     }
   },
+  "directories": {
+    "buildResources": "buildRes",
+    "output": "out/dist",
+    "app": "."
+  },
   "homepage": "https://github.com/ZoolWay/electron-typescript-aurelia-starter",
   "bugs": {
     "url": "https://github.com/ZoolWay/electron-typescript-aurelia-starter/issues"
