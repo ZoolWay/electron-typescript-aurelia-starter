@@ -28,6 +28,16 @@
             "args" : ["electron", "dist/main.js"]
         },
         {
+            "taskName": "pack-win-x64",
+            "suppressTaskName": true,
+            "args": ["electron-packager", ".", "--platform=win32", "--arch=x64", "--out=out"]
+        },
+        {
+            "taskName": "pack-mac-x64",
+            "suppressTaskName": true,
+            "args": ["electron-packager", ".", "--platform=darwin", "--arch=x64", "--out=out"]
+        },
+        {
             "taskName": "dotnet version",
             "suppressTaskName": true,
             "args" : ["dotnet", "--version"],
