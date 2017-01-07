@@ -10,6 +10,15 @@
     "vscode",
     "electron"
   ],
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "iconUrl": "https link to icon"
+    }
+  },
   "homepage": "https://github.com/ZoolWay/electron-typescript-aurelia-starter",
   "bugs": {
     "url": "https://github.com/ZoolWay/electron-typescript-aurelia-starter/issues"
